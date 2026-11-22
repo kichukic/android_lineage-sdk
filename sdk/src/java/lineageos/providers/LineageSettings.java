@@ -982,6 +982,54 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 2);
 
         /**
+         * Display style of date next to clock in status bar
+         * 0: No display
+         * 1: Small display
+         * 2: Normal display
+         * default: 0
+         */
+        public static final String STATUS_BAR_CLOCK_DATE_DISPLAY = "status_bar_clock_date_display";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_CLOCK_DATE_DISPLAY_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 2);
+
+        /**
+         * Text style of date in status bar
+         * 0: Regular
+         * 1: Lowercase
+         * 2: Uppercase
+         * default: 0
+         */
+        public static final String STATUS_BAR_CLOCK_DATE_STYLE = "status_bar_clock_date_style";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_CLOCK_DATE_STYLE_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 2);
+
+        /**
+         * Position of date relative to clock in status bar
+         * 0: Left of time
+         * 1: Right of time
+         * default: 0
+         */
+        public static final String STATUS_BAR_CLOCK_DATE_POSITION = "status_bar_clock_date_position";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_CLOCK_DATE_POSITION_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 1);
+
+        /**
+         * Date format string for status bar clock
+         * default: EEE
+         */
+        public static final String STATUS_BAR_CLOCK_DATE_FORMAT = "status_bar_clock_date_format";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_CLOCK_DATE_FORMAT_VALIDATOR =
+                sAlwaysTrueValidator;
+
+        /**
          * Display style of the status bar battery information
          * 0: Display the battery an icon in portrait mode
          * 1: Display the battery as a circle
@@ -2136,6 +2184,10 @@ public final class LineageSettings {
             VALIDATORS.put(STATUS_BAR_CLOCK, STATUS_BAR_CLOCK_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_CLOCK_AUTO_HIDE, STATUS_BAR_CLOCK_AUTO_HIDE_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_AM_PM, STATUS_BAR_AM_PM_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_CLOCK_DATE_DISPLAY, STATUS_BAR_CLOCK_DATE_DISPLAY_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_CLOCK_DATE_STYLE, STATUS_BAR_CLOCK_DATE_STYLE_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_CLOCK_DATE_POSITION, STATUS_BAR_CLOCK_DATE_POSITION_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_CLOCK_DATE_FORMAT, STATUS_BAR_CLOCK_DATE_FORMAT_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BATTERY_STYLE, STATUS_BAR_BATTERY_STYLE_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_SHOW_BATTERY_PERCENT,
                     STATUS_BAR_SHOW_BATTERY_PERCENT_VALIDATOR);
